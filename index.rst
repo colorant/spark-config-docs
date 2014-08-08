@@ -3,12 +3,6 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-.. toctree::
-    :hidden:
-   
-    general
-    shuffle
-
 Spark性能相关参数配置
 =====================
 
@@ -26,6 +20,15 @@ Spark性能相关参数配置
 
 * :doc:`./general`
 * :doc:`./shuffle`
+
+
+章节
+----
+
+.. toctree::
+   
+    general
+    shuffle
 
 
 Indices and tables
