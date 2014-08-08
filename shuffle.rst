@@ -37,5 +37,5 @@ shuffle的过程中，如果涉及到排序，聚合等操作，势必会需要�
 
 这里spark.shuffle.spill 决定是否Spill到外部存储设备（默认打开），而spark.shuffle.memoryFraction决定了当Shuffle过程中使用的内存达到总内存多少比例的时候开始Spill。
 
-如果你的内存足够使用，当然也就不需要Spill，毕竟Spill带来了额外的磁盘操作，如果需要Spill，则可以通过spark.shuffle.memoryFraction调整Spill之前Shuffle占用内存的大小，进而调整Spill的频率和GC的行为。总的来说，如果Spill太过频繁，适当增加
+如果你的内存足够使用，当然也就不需要Spill，毕竟Spill带来了额外的磁盘操作，如果需要Spill，则可以通过spark.shuffle.memoryFraction调整Spill之前Shuffle占用内存的大小，进而调整Spill的频率和GC的行为。总的来说，如果Spill太过频繁，可以适当增加spark.shuffle.memoryFraction的大小，增加用于Shuffle的内存，减少Spill的次数。当然这样一来为了避免内存溢出，对应的可能需要减少RDD cache占用的内存，即减小spark.storage.memoryFraction的值，这样RDD cache的容量减少，有可能带来性能影响，因此需要综合考虑。
 
