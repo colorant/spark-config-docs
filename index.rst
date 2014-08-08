@@ -4,13 +4,13 @@
    contain the root `toctree` directive.
 
 .. toctree::
-   :maxdepth: 2
-
+    :hidden:
+   
+    general
+    shuffle
 
 Spark性能相关参数配置
 =====================
-
-Contents:
 
 概述
 ----
